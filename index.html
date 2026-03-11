@@ -1,46 +1,76 @@
-<!doctype html>
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>HTML Example</title>
-  
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/about.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조수정.com</title>
+    <style>
+        #title{
+            text-align: center;
+        }
+
+
+        .input{
+            margin: 1rem;
+            text-align: center;
+        }
+        
+        .btn:hover{
+            background-color: rgb(230,230,230);
+        }
+
+        .btn{
+            cursor: pointer;
+            background-color: rgb(256,256,256);
+        }
+        
+        .btn_1{
+            text-align: center;
+        }
+
+        .register{
+            margin: 1rem;
+            text-align: center;
+        }
+
+        .reg{
+            color: rgb(0,150,255);
+            cursor: pointer;
+            text-align: center;
+        }
+        
+    </style>
 </head>
 <body>
-  <section class="center">
-    <aside class="sidebar"></aside>
+    <h1 id="title">반갑습니다</h1>
     
-    <section class="contents">
-      <!-- page will be include here -->
-      <section id="page" class="page">
-        <section id="about">
-          <section class="frame">
-            <h2><b>HELLO</b>WORLD</h2>
-            
-            <div class="cat">
-              <div class="picture">
-                <img src="images/mew.png" alt="Mew">
-              </div>
-              <small>Mew</small>
-            </div>
-            <div class="cat">
-              <div class="picture">
-                <img src="images/siesta.png" alt="Siesta">
-              </div>
-              <small>Siesta</small>
-            </div>
-            <div class="cat">
-              <div class="picture">
-                <img src="images/tiger.png" alt="Tiger">
-              </div>
-              <small>Tiger</small>
-            </div>
-          </section>
-        </section>
-      </section>
-    </section>
-  </section>
+    <div class="input">
+        <label for="log">아이디</label>
+        <input id="log" type="text">
+    </div>
+    
+    <div class=input>
+        <label for="pw">비밀번호</label>
+        <input id="pw" type="password">
+    </div>
+
+    <div class="btn_1">
+        <button class="btn">로그인</button>
+    </div>
+    
+    <div class="register">
+        <span class="reg">신규 회원이신가요?</span>
+    </div>
 </body>
 </html>
+<script>
+    const aaa=document.getElementsByClassName('register')
+    aaa[0].onclick=function(){
+        alert('회원가입 기능 출시예정')
+    }
+
+    const bbb=document.getElementsByClassName('btn')
+    bbb[0].onclick=function(){
+        alert('로그인 기능 출시예정')
+    }
+</script>
