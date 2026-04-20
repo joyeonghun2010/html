@@ -1,73 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>조수정.com</title>
+
     <style>
-        #title{
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            width: 300px;
             text-align: center;
         }
 
-
-        .input{
-            margin: 1rem;
-            text-align: center;
-        }
-        
-        .btn:hover{
-            background-color: rgb(230,230,230);
+        h1 {
+            margin-bottom: 1.5rem;
+            color: #333;
         }
 
-        .btn{
+        .input-group {
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 0.3rem;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            outline: none;
+            transition: 0.2s;
+        }
+
+        .input-group input:focus {
+            border-color: #4facfe;
+            box-shadow: 0 0 5px rgba(79,172,254,0.5);
+        }
+
+        .btn {
+            width: 100%;
+            padding: 0.6rem;
+            border: none;
+            border-radius: 6px;
+            background: #4facfe;
+            color: white;
+            font-size: 1rem;
             cursor: pointer;
-            background-color: rgb(256,256,256);
-        }
-        
-        .btn_1{
-            text-align: center;
+            transition: 0.2s;
         }
 
-        .register{
-            margin: 1rem;
-            text-align: center;
+        .btn:hover {
+            background: #3a8ee6;
         }
 
-        .reg{
-            color: rgb(0,150,255);
+        .register {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .reg {
+            color: #4facfe;
             cursor: pointer;
-            text-align: center;
         }
-        
+
+        .reg:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
+
 <body>
-    <h1 id="title">반갑습니다</h1>
-    
-    <div class="input">
-        <label for="log">아이디</label>
-        <input id="log" type="text">
-    </div>
-    
-    <div class=input>
-        <label for="pw">비밀번호</label>
-        <input id="pw" type="password">
+    <div class="container">
+        <h1>반갑습니다</h1>
+
+        <div class="input-group">
+            <label for="log">아이디</label>
+            <input id="log" type="text">
+        </div>
+
+        <div class="input-group">
+            <label for="pw">비밀번호</label>
+            <input id="pw" type="password">
+        </div>
+
+        <button class="btn">로그인</button>
+
+        <div class="register">
+            <span class="reg">신규 회원이신가요?</span>
+        </div>
     </div>
 
-    <div class="btn_1">
-        <button class="btn">로그인</button>
-    </div>
-    
-    <div class="register">
-        <span class="reg">신규 회원이신가요?</span>
-    </div>
+    <script>
+        document.querySelector('.reg').onclick = function(){
+            alert('회원가입 기능 출시예정');
+        }
+
+        document.querySelector('.btn').onclick = function(){
+            alert('로그인 기능 출시예정');
+        }
+    </script>
 </body>
 </html>
-<script>
-    const aaa=document.getElementsByClassName('register')
-    aaa[0].onclick=function(){
-        alert('회원가입 기능 출시예정')
-    }
 
     const bbb=document.getElementsByClassName('btn')
     bbb[0].onclick=function(){
